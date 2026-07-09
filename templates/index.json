@@ -73,6 +73,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "<strong>Featured products</strong>",
         "heading_size": "h1",
@@ -191,11 +192,43 @@
       "name": "Custom Banner",
       "settings": {
         "my_custom_image": "shopify://shop_images/banner.png",
+        "short_heading": "",
         "heading": "Ampoules Supercharged Serum",
         "description": "When serums just aren't enough. Imported from France and handled with the utmost care and advanced technique, Bio Jouvance Paris ampoules are supercharged serums with higher concentrations of active ingredients for an added boost to any facial treatment or at home self care remedy.",
         "banner_button_text": "SHOP NOW",
+        "banner_button_link": "shopify://pages/our-products",
+        "layout": "image_first",
+        "padding_top": 125,
+        "padding_bottom": 125
+      }
+    },
+    "custom_banner_section_fDqyMg": {
+      "type": "custom-banner-section",
+      "name": "Custom Banner",
+      "settings": {
+        "my_custom_image": "shopify://shop_images/banner2.png",
+        "short_heading": "",
+        "heading": "Nourish & Nurture Your SkinWith Our CoQ10 Collection",
+        "description": "Stimulate new cell growth with our CoQ10 nourishing recovery masque Oxygenate your skin with our concentrated serum Protect your skin from harmful radicals with our CoQ10 Cream",
+        "banner_button_text": "SHOP NOW",
+        "banner_button_link": "shopify://pages/our-products",
+        "layout": "text_first",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "custom_banner_section_jrKFKY": {
+      "type": "custom-banner-section",
+      "name": "Custom Banner",
+      "settings": {
+        "my_custom_image": "shopify://shop_images/banner3.png",
+        "short_heading": "COLASTIN",
+        "heading": "Age-DefyingCream",
+        "description": "Formulated with the same ratio of collagen and elastin present in human skin tissue, this luxurious cream helps improve elasticity and suppleness in skin.",
+        "banner_button_text": "",
         "banner_button_link": "",
-        "padding_top": 50,
+        "layout": "text_first",
+        "padding_top": 135,
         "padding_bottom": 50
       }
     }
@@ -207,6 +240,8 @@
     "f1552b18-6017-4231-810d-74e61da22c37",
     "38cdf60f-e431-43b5-aac3-7e6215447d67",
     "custom_text_UqfExP",
-    "custom_banner_section_gHfDMX"
+    "custom_banner_section_gHfDMX",
+    "custom_banner_section_fDqyMg",
+    "custom_banner_section_jrKFKY"
   ]
 }
