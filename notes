@@ -1,2 +1,12 @@
 # Shopify 
--- 
+-- Created custom metafields and metafield objects to add products as gifts.
+-- Created a section for product metaobjects to display gift related to products.
+
+# Bio-Jouvance
+-- created a custom hero section settings an hero section
+-- created banners sections with different user customizeable settings
+-- added Separate settings for each banner 
+-- created variable files for custom css
+-- added all the beauty products to the store
+-- Created templates for beaty product page 
+-- assigned template to beauty products
