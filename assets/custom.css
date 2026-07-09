@@ -106,7 +106,31 @@
     justify-content: end;
     padding: 125px 98px 125px 98px;
 }
+.custom-banner {
+    max-width: 1440px;
+    aspect-ratio: 1440/598;
+    margin: 0 auto;
+    display: flex;
+    padding: 125px 98px;
+}
 
+/* Text on Right */
+.custom-banner.text-right {
+    justify-content: flex-end;
+}
+
+/* Text on Left */
+.custom-banner.text-left {
+    justify-content: flex-start;
+}
+
+.banner-text-container {
+    max-width: 558px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}  
+   
 .banner-text-container {
     max-width: 558px;
     width: 100%;
@@ -114,7 +138,15 @@
     flex-direction: column;
     align-items: left;
 }
+.banner-short-heading{
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: var(--light-text-color);
+    margin-bottom:8px;
 
+}
 .banner-text-container h1 {
     font-weight: 700;
     font-size: 48px;

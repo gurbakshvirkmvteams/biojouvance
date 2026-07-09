@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "custom_hero_AdWz4U": {
+      "type": "custom-hero",
+      "name": "Hero Section",
+      "settings": {
+        "title": "Nourish & Nurture Your Skin With Our CoQ10 Collection",
+        "subtitle": "Protect your skin from harmful radicals with our CoQ10 Cream",
+        "button_text": "SHOP NOW",
+        "button_link": "",
+        "hero_image": "shopify://shop_images/hero-section-image.png",
+        "padding_top": 130,
+        "padding_bottom": 130
+      }
+    },
     "6a3bb789-ce10-45f5-ae67-e2063ef8c76b": {
       "type": "image-banner",
       "blocks": {
@@ -43,7 +56,7 @@
         "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1",
         "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2"
       ],
-      "custom_css": [],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/theme_cover_image.jpg",
         "image_overlay_opacity": 30,
@@ -115,6 +128,7 @@
         "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-1",
         "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-2"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/theme_cover_image.jpg",
         "height": "adapt",
@@ -150,6 +164,7 @@
         "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0",
         "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1"
       ],
+      "disabled": true,
       "settings": {
         "title": "<strong>Collections</strong>",
         "heading_size": "h1",
@@ -165,6 +180,7 @@
     },
     "custom_text_UqfExP": {
       "type": "custom-text",
+      "disabled": true,
       "name": "My Custom Text",
       "settings": {
         "custom_text": "Ritesh kumar dsdsdsdsdsd"
@@ -174,11 +190,18 @@
       "type": "custom-banner-section",
       "name": "Custom Banner",
       "settings": {
-        "my_custom_image": "shopify://shop_images/theme_cover_image.jpg"
+        "my_custom_image": "shopify://shop_images/banner.png",
+        "heading": "Ampoules Supercharged Serum",
+        "description": "When serums just aren't enough. Imported from France and handled with the utmost care and advanced technique, Bio Jouvance Paris ampoules are supercharged serums with higher concentrations of active ingredients for an added boost to any facial treatment or at home self care remedy.",
+        "banner_button_text": "SHOP NOW",
+        "banner_button_link": "",
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     }
   },
   "order": [
+    "custom_hero_AdWz4U",
     "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
     "featured_collection",
     "f1552b18-6017-4231-810d-74e61da22c37",
