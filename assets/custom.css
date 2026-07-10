@@ -273,3 +273,26 @@
         gap: 24px;
     }
 }
+
+/* Custom text banner section */
+.banner-text-container {
+    max-width: 1440px;
+    padding-left: 58px;
+    padding-right: 58px;
+    margin: 0 auto;
+}
+
+.banner-text-container.text_left_aligned {
+    text-align: left;
+}
+
+.banner-text-container.text_center_aligned {
+    text-align: center;
+}
+
+.banner-text-container.text_right_aligned {
+    text-align: right;
+}
+.banner-text-container * {
+  color: inherit;
+}
