@@ -1,29 +1,31 @@
 {{ 'custom.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.my_custom_image != blank %}
-  {% comment %} <div class="custom-banner" style="background-image: url({{ section.settings.my_custom_image | image_url: width: 1600 }}); padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"> {% endcomment %}
-  <div class="custom-banner {% if section.settings.layout == 'text_first' %}text-left{% else %}text-right{% endif %}" style="
-    background-image: url({{ section.settings.my_custom_image | image_url: width: 1600 }});
+  <div class="custom-banner-section-wrapper" style=" background-image: url({{ section.settings.my_custom_image | image_url: width: 1600 }}); min-height:{{ section.settings.section_min_height }}px">
+    {% comment %} <div class="custom-banner" style="background-image: url({{ section.settings.my_custom_image | image_url: width: 1600 }}); padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"> {% endcomment %}
+    <div class="custom-banner {% if section.settings.layout == 'text_first' %}text-left{% else %}text-right{% endif %}" style="
+   
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
-  ">
-    <div class="banner-text-container">
-      {% if section.settings.short_heading != blank %}
-        <span class="banner-short-heading">
-          {{ section.settings.short_heading }}
-        </span>
-      {% endif %}
+    ">
+      <div class="banner-text-container">
+        {% if section.settings.short_heading != blank %}
+          <span class="banner-short-heading">
+            {{ section.settings.short_heading }}
+          </span>
+        {% endif %}
 
-      <h1>{{ section.settings.heading }}</h1>
+        <h1>{{ section.settings.heading }}</h1>
 
-      <p>{{ section.settings.description }}</p>
+        <p>{{ section.settings.description }}</p>
 
-      {% if section.settings.banner_button_text != blank and section.settings.banner_button_link != blank
-      %}
-        <a href="{{ section.settings.banner_button_link }}" class="banner-button">
-          {{ section.settings.banner_button_text }}
-        </a>
-      {% endif %}
+        {% if section.settings.banner_button_text != blank and section.settings.banner_button_link != blank
+        %}
+          <a href="{{ section.settings.banner_button_link }}" class="banner-button">
+            {{ section.settings.banner_button_text }}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 {% endif %}
@@ -92,6 +94,15 @@
         "step": 5,
         "unit": "px",
         "default": 50
+      },{
+        "type": "range",
+        "id": "section_min_height",
+        "label":"Section Minimum Height",
+        "min": 100,
+        "max": 600,
+        "step": 25,
+        "unit": "px",
+        "default": 200
       }
     ],
     "presets": [
