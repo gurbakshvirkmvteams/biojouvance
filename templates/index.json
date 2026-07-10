@@ -178,14 +178,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_text_UqfExP": {
-      "type": "custom-text",
-      "disabled": true,
-      "name": "My Custom Text",
-      "settings": {
-        "custom_text": "Ritesh kumar dsdsdsdsdsd"
-      }
-    },
     "custom_banner_section_gHfDMX": {
       "type": "custom-banner-section",
       "name": "Custom Banner",
@@ -276,6 +268,45 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_video_CgFNNR": {
+      "type": "custom-video",
+      "name": "Custom Video Section",
+      "settings": {
+        "left_video": "shopify://files/videos/7754396-hd_1920_1080_30fps.mp4",
+        "right_video": "shopify://files/videos/10835749-hd_1920_1080_25fps.mp4",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "featured_blog_DjYhUK": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "textbanner_eEEYFf": {
+      "type": "textbanner",
+      "name": "Text Banner Section",
+      "settings": {
+        "banner_text": "<h2>Advanced Education</h2>",
+        "banner_text_color": "#000000",
+        "text_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
@@ -284,10 +315,12 @@
     "featured_collection",
     "f1552b18-6017-4231-810d-74e61da22c37",
     "38cdf60f-e431-43b5-aac3-7e6215447d67",
-    "custom_text_UqfExP",
     "custom_banner_section_gHfDMX",
     "custom_banner_section_fDqyMg",
     "custom_banner_section_jrKFKY",
-    "collection_list_FqXbgU"
+    "collection_list_FqXbgU",
+    "custom_video_CgFNNR",
+    "featured_blog_DjYhUK",
+    "textbanner_eEEYFf"
   ]
 }
