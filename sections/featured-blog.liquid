@@ -57,10 +57,10 @@
               id="Slide-{{ section.id }}-{{ forloop.index }}"
               class="blog__post grid__item article slider__slide slider__slide--full-width"
             >
-              {% render 'article-card',
+              {% render 'custom-article-card',
                 blog: section.settings.blog,
                 article: article,
-                media_aspect_ratio: 1.66,
+                media_aspect_ratio: 0.90,
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
@@ -102,7 +102,7 @@
           <a
             href="{{ section.settings.blog.url }}"
             id="ViewAll-{{ section.id }}"
-            class="blog__button button"
+            class="blog__button custom-blog-article-blog__button button custom-quick-addtocart"
             aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
           >
             {{ 'sections.featured_blog.view_all' | t }}

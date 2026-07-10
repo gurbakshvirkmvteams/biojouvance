@@ -1,3 +1,4 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
 {% comment %}
   Renders an article card for a given blog with settings to either show the image or not.
 
@@ -13,7 +14,7 @@
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
 
   Usage:
-  {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+  {% render 'custom-article-card' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
 
 {%- if article and article != empty -%}
@@ -23,31 +24,24 @@
       assign ratio = media_aspect_ratio
     endif
   -%}
-  <div class="article-card-wrapper card-wrapper underline-links-hover">
+  <div class="article-card-wrapper custom-blog-article-card-wrapper card-wrapper underline-links-hover gahcfyuqgfweiufgowqyoqy;ayqwtigdqfd7qtw7e;9qtew9t97">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
-    <div
-      class="
-        card article-card
+    <div class="
+        card article-card custom-blog-article-card
         card--{{ settings.blog_card_style }}
         {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
         {% if article.image and show_image %} card--media{% else %} card--text{% endif %}
         {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
         {% if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
-      "
-      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-    >
-      <div
-        class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
-        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-      >
+      " style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+      <div class="card__inner custom-blog-article-card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         {%- if show_image == true and article.image -%}
-          <div class="article-card__image-wrapper card__media">
+          <div class="article-card__image-wrapper custom-blog-article-card__image-wrapper card__media">
             <div
               class="article-card__image media media--hover-effect"
               {% if section.settings.media_height == 'adapt' %}
-                style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
-            >
+              style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+              {% endif %}>
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
@@ -64,24 +58,18 @@
                 alt="{{ article.image.src.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}
-                  loading="lazy"
+                loading="lazy"
                 {% endunless %}
                 width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
-              >
+                height="{{ article.image.height }}">
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
+        <div class="card__content custom-blog-card__content ">
           <div class="card__information">
-            <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
-              <a href="{{ article.url }}" class="full-unstyled-link">
-                {{ article.title | truncate: 50 | escape }}
-              </a>
-            </h3>
             {% comment %} this section to be changed  {% endcomment %}
-            <div class="article-card__info caption-with-letter-spacing h5">
+            <div class="article-card__info custom-blog-article-card__info caption-with-letter-spacing h5">
               {%- if show_date -%}
                 <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
               {%- endif -%}
@@ -89,9 +77,15 @@
                 <span>{{ article.author }}</span>
               {%- endif -%}
             </div>
+            <h3 class="card__heading custom-blog-card__heading {% if show_excerpt %} h2{% endif %}">
+              <a href="{{ article.url }}" class="full-unstyled-link">
+                {{ article.title | truncate: 50 | escape }}
+              </a>
+            </h3>
+
             {%- if show_excerpt -%}
               {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-                <p class="article-card__excerpt rte-width">
+                <p class="article-card__excerpt custom-blog-article-card__excerpt rte-width">
                   {%- if article.excerpt.size > 0 -%}
                     {{ article.excerpt | strip_html | truncatewords: 30 }}
                   {%- else -%}
@@ -99,7 +93,7 @@
                   {%- endif -%}
                 </p>
               {%- endif -%}
-              <div class="article-card__footer">
+              <div class="article-card__footer custom-blog-article-card__footer">
                 {%- if article.comments_count > 0 and blog.comments_enabled? -%}
                   <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
                 {%- endif -%}
@@ -113,14 +107,10 @@
           {%- endif -%}
         </div>
       </div>
-      <div class="card__content">
+      <div class="card__content   custom-blog-card__content">
         <div class="card__information">
-          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
-            <a href="{{ article.url }}" class="full-unstyled-link">
-              {{ article.title | truncate: 50 | escape }}
-            </a>
-          </h3>
-          <div class="article-card__info caption-with-letter-spacing h5">
+          
+          <div class="article-card__info custom-blog-article-card__info caption-with-letter-spacing h5">
             {%- if show_date -%}
               <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
@@ -128,9 +118,14 @@
               <span>{{ article.author }}</span>
             {%- endif -%}
           </div>
+          <h3 class="card__heading custom-blog-card__heading{% if show_excerpt %} h2{% endif %}">
+            <a href="{{ article.url }}" class="full-unstyled-link">
+              {{ article.title | truncate: 50 | escape }}
+            </a>
+          </h3>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
+              <p class="article-card__excerpt custom-blog-article-card__excerpt rte-width">
                 {%- if article.excerpt.size > 0 -%}
                   {{ article.excerpt | strip_html | truncatewords: 30 }}
                 {%- else -%}
@@ -138,7 +133,7 @@
                 {%- endif -%}
               </p>
             {%- endif -%}
-            <div class="article-card__footer">
+            <div class="article-card__footer custom-blog-article-card__footer ">
               {%- if article.comments_count > 0 and blog.comments_enabled? -%}
                 <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
               {%- endif -%}

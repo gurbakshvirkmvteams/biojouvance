@@ -80,7 +80,6 @@
                 {{ article.title | truncate: 50 | escape }}
               </a>
             </h3>
-            {% comment %} this section to be changed  {% endcomment %}
             <div class="article-card__info caption-with-letter-spacing h5">
               {%- if show_date -%}
                 <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>

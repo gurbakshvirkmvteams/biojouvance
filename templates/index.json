@@ -255,6 +255,7 @@
         "featured_collection_mEgywX",
         "featured_collection_PkMXVm"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "Collections",
@@ -267,6 +268,17 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "textbanner_eEEYFf": {
+      "type": "textbanner",
+      "name": "Text Banner Section",
+      "settings": {
+        "banner_text": "<h2>Advanced Education</h2>",
+        "banner_text_color": "#000000",
+        "text_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     },
     "custom_video_CgFNNR": {
@@ -297,15 +309,54 @@
         "padding_bottom": 36
       }
     },
-    "textbanner_eEEYFf": {
-      "type": "textbanner",
-      "name": "Text Banner Section",
+    "custom_feature_banner_cards_R3NEdt": {
+      "type": "custom-feature-banner-cards",
+      "blocks": {
+        "feature_zTHieX": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/bunny.svg",
+            "title": "CRUELTY FREE",
+            "description": "We make skincare and makeup with love, for all. None of our products or formulas have or will ever be tested on animals."
+          }
+        },
+        "feature_QePHxi": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/plant.svg",
+            "title": "NON GMO",
+            "description": "We formulate without gluten-derived ingredients. While not proven to cause a reaction in those with gluten sensitivities."
+          }
+        },
+        "feature_BceDEp": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/carrot.svg",
+            "title": "VEGAN",
+            "description": "We are vegan meaning that none of our products, packaging, formulas or ingredients contain animal derivatives."
+          }
+        },
+        "feature_pqkGz9": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/plant2.svg",
+            "title": "ORGANIC",
+            "description": "We make skincare and makeup with love, for all. None of our products or formulas have or will ever be tested on animals."
+          }
+        }
+      },
+      "block_order": [
+        "feature_zTHieX",
+        "feature_QePHxi",
+        "feature_BceDEp",
+        "feature_pqkGz9"
+      ],
+      "name": "Feature Cards",
       "settings": {
-        "banner_text": "<h2>Advanced Education</h2>",
-        "banner_text_color": "#000000",
-        "text_alignment": "center",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "background_color": "#D8B5B6",
+        "text_color": "#FFFFFF",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
@@ -319,8 +370,9 @@
     "custom_banner_section_fDqyMg",
     "custom_banner_section_jrKFKY",
     "collection_list_FqXbgU",
+    "textbanner_eEEYFf",
     "custom_video_CgFNNR",
     "featured_blog_DjYhUK",
-    "textbanner_eEEYFf"
+    "custom_feature_banner_cards_R3NEdt"
   ]
 }
