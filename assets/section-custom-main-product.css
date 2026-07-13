@@ -128,10 +128,8 @@
 
 .custom-featured-card__media {
   width: 100%;
-  max-width: 258px;
   aspect-ratio: 1;
-  border-radius: 20px;
-  overflow: hidden;
+ 
   background: #fff;
   border: 1px solid #ececec;
   display: flex;
@@ -146,11 +144,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
 }
 
 .custom-featured-card__media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.custom-card__inner{
+  max-width: 258px;
+  aspect-ratio: 1;
+   border-radius: 20px !important;
+  overflow: hidden;
+
+}
+.custom-product-card-wrapper{
+  max-width: 258px;
+}
+.custom-card__heading{
+font-weight: 700;
+font-size: 14px;
+line-height: 28px;
+letter-spacing: 0%;
+text-align: center;
+}
+
+{
+  font-family: Poppins;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 28px;
+letter-spacing: 0%;
+text-align: center;
+
 }
