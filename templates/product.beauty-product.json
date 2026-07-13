@@ -87,9 +87,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_product_details_nhk7te": {
+      "type": "custom-product-details",
+      "name": "Product description meta",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "heading": "Related products",
         "heading_size": "h2",
@@ -103,6 +110,51 @@
         "columns_mobile": "2",
         "padding_top": 48,
         "padding_bottom": 28
+      }
+    },
+    "guide_text_j8tkUK": {
+      "type": "guide-text",
+      "name": "Product How To",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_guide_icon": "shopify://shop_images/guide.png",
+        "section_heading": "HOW TO USE",
+        "section_tagline": "Use Multi Vitamin C Serum twice daily, in the morning and at night time.",
+        "section_description": "<p>STEP 1: Thoroughly cleanse and tone the skin.</p><p>STEP 2: Apply Multi Vitamin C Serum on the face, neck and décolleté area.</p><p>STEP 3: Wait until absorbed to apply sunscreen and/or moisturizer.</p>"
+      }
+    },
+    "custom_image_text_6d7GxB": {
+      "type": "custom-image-text",
+      "name": "Image Text Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/review-banner-bg.png",
+        "mobile_background_image": "shopify://shop_images/review-banner-bg.png",
+        "heading": "CUSTOMER REVIEWS",
+        "subheading": "For Multi Vitamin C Serum",
+        "heading_size": 28,
+        "subheading_size": 12,
+        "heading_color": "#ffffff",
+        "subheading_color": "#ffffff",
+        "text_alignment": "center",
+        "button_text": "",
+        "button_link": "",
+        "button_bg": "#ffffff",
+        "button_color": "#000000",
+        "button_radius": 6,
+        "content_padding_top": 135,
+        "content_padding_bottom": 135,
+        "content_padding_left": 40,
+        "content_padding_right": 40,
+        "margin_top": 30,
+        "margin_bottom": 30,
+        "max_width": 1300,
+        "desktop_height": 340,
+        "border_radius": 20,
+        "section_height": 340,
+        "mobile_height": 250,
+        "overlay_color": "#000000",
+        "overlay_opacity": 10
       }
     },
     "1783657549201debd2": {
@@ -128,7 +180,10 @@
   },
   "order": [
     "main",
-    "related-products",
-    "1783657549201debd2"
+    "custom_product_details_nhk7te",
+    "guide_text_j8tkUK",
+    "custom_image_text_6d7GxB",
+    "1783657549201debd2",
+    "related-products"
   ]
 }

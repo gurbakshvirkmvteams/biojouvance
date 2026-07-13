@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/theme_cover_image.jpg",
+    "logo_text": "Logo",
     "logo_width": 120,
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
