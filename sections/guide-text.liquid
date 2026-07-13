@@ -1,0 +1,184 @@
+{% style %}
+  .custom-how-to-use-section {
+    max-width: 1344px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-height: 515px;
+  }
+  .custom-how-to-use-container {
+    background: #CCA9A9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 515px;
+  }
+  .custom-how-to-use-left,
+  .custom-how-to-use-right {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(20px, 5vw, 60px);
+    min-width: 0;
+  }
+
+  .custom-how-to-use-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .custom-how-to-use-right {
+    align-items: flex-start;
+  }
+  .custom-how-to-use-heading,
+  .custom-how-to-use-tagline,
+  .custom-how-to-use-description {
+    color: #FFFFFF;
+  }
+  .custom-how-to-use-tagline {
+    text-align: center;
+  }
+  .custom-how-to-use-divider {
+    display: block !important;
+    width: 1px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.35);
+    flex-shrink: 0;
+    margin-left: clamp(5px, 5vw, 40px);
+    margin-right: clamp(5px, 5vw, 40px);
+  }
+  .custom-how-to-section_icon {
+    height: 30px;
+    width: 30px;
+  }
+  .custom-how-to-section_icon img {
+    width: 100%;
+    height: 100%
+  }
+  .custom-how-to-use-heading {
+    font-weight: 700;
+    font-size: clamp(28px, 3vw, 36px);
+    line-height: 100%;
+    letter-spacing: 0;
+    margin: 8px 0 28px;
+  }
+  .custom-how-to-use-tagline {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0;
+    max-width: 283px;
+
+  }
+  .custom-how-to-use-description {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: 0;
+  }
+  .custom-how-to-use-description p {
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .custom-how-to-use-container {
+      flex-direction: column;
+    }
+    .custom-how-to-use-divider {
+      height: 1px;
+      width: 100%;
+      max-width: 320px;
+    }
+    .custom-how-to-use-tagline {
+      font-size: 12px;
+    }
+    .custom-how-to-use-description {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+{% endstyle %}
+{% if section.settings.section_heading != blank %}
+  <div class="custom-how-to-use-section" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="custom-how-to-use-container">
+
+      <div class="custom-how-to-use-left">
+        {% if section.settings.custom_guide_icon != blank %}
+          <div class="custom-how-to-section_icon">
+            {{
+              section.settings.custom_guide_icon | image_url: width: 80 | image_tag: class: 'custom-how-to-use-icon'
+            }}
+          </div>
+        {% endif %}
+        {% if section.settings.section_heading != blank %}
+          <h2 class="custom-how-to-use-heading">
+            {{ section.settings.section_heading }}
+          </h2>
+        {% endif %}
+        {% if section.settings.section_tagline != blank %}
+          <p class="custom-how-to-use-tagline">
+            {{ section.settings.section_tagline }}
+          </p>
+        {% endif %}
+      </div>
+      <div class="custom-how-to-use-divider"></div>
+      <div class="custom-how-to-use-right">
+        {% if section.settings.section_description != blank %}
+          <div class="custom-how-to-use-description">
+            {{ section.settings.section_description }}
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "How to Use",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_guide_icon",
+        "label": "Add Heading Icon"
+      },
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "section_tagline",
+        "label": "Heading Tagline"
+      }, {
+        "type": "richtext",
+        "id": "section_description",
+        "label": "Section Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product How To"
+      }
+    ]
+  }
+{% endschema %}

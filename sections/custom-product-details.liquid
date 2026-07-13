@@ -1,0 +1,71 @@
+<link
+  rel="stylesheet"
+  href="{{ 'custom-meta-product-details.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'">
+
+<div class="custom-product-details" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="custom-product-description">
+    <div class="custom-product-description-image">
+      <div class="grid-image">
+        {% if product.metafields.custom.ingredients_image %}
+          {{
+            product.metafields.custom.ingredients_image | image_url: width: 800 | image_tag
+          }}
+        {% endif %}
+      </div>
+    </div>
+    <div class="custom-product-description-text">
+      {% if product.metafields.custom.ingredients_description %}
+        <p>{{ product.metafields.custom.details_description | metafield_tag }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="custom-product-details-content">
+    <div class="custom-product-details-text">
+      <p>{{ product.metafields.custom.ingredients_description | metafield_tag }}</p>
+    </div>
+
+    {% if product.metafields.custom.product_details.value != blank %}
+      <div class="custom-product-details-image">
+        {% for image in product.metafields.custom.product_details.value %}
+          {{
+            image | image_url: width: 800 | image_tag
+          }}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Product Metaobjects",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product description meta"
+      }
+    ]
+  }
+{% endschema %}
