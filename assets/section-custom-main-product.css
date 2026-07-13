@@ -1,0 +1,123 @@
+:root {
+  --description-color: #5B5B5B;
+  --dark-text: #000000;
+
+}
+
+.custom-product__info-wrapper {
+  border: 2px solid #EDEDED;
+  padding: 48px;
+  max-width: 628px !important;
+  width: 100%;
+  aspect-ratio: 1/1 !important;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+.custom-product__media-container {
+  max-width: 1304px;
+  gap: 40px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-product__media-wrapper {
+  max-width: none !important;
+  aspect-ratio: 1/1 !important;
+  max-width: 628px !important;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.custom-product__info-container .product__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--description-color);
+}
+
+.custom-product__info-container .product__title h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 18px 0;
+}
+
+.custom-product__info-container .product__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+
+.custom-product__info-container .price__regular {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.custom-quantity{
+  /* border: 1px solid red; */
+  border: 1px solid #A0A0A0;
+  border-radius: 10px;
+  max-width: 116px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+}
+.custom-quantity .quantity__button{
+}
+ 
+.custom-quantity .quantity__button{
+ color: white;
+  background-color: black !important;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+}
+.custom-quantity .quantity__input{
+font-weight: 700;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+}
+.add-to-cart-button, .add-to-cart-button::after{
+  max-width: 299px;
+aspect-ratio: 299/63;
+border-radius: 10px;
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 10%;
+text-transform: uppercase;
+}
+.custom-share-button__button{
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 10%;
+text-transform: uppercase;
+color: var(--description-color);
+display: flex;
+gap: 14px;
+
+}
+.custom-product__media-image{
+  border-radius: 20px;
+}
+.add-to-cart_wishlist-container{
+  display: flex;
+  gap: clamp(5px, 3vw, 18px);
+}
+.custom-wishlist-button{
+  aspect-ratio: 1/1;
+height: 63px;
+border-radius: 10px;
+border: 2px solid #000000;
+cursor: pointer;
+}

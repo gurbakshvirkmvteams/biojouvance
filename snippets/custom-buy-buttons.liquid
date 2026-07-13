@@ -24,7 +24,7 @@
       endif
     -%}
 
-    <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
+    <product-form class=" product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
       <div class="product-form__error-message-wrapper" role="alert" hidden>
         <svg
           aria-hidden="true"
@@ -69,11 +69,12 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <button
+          <div class="add-to-cart_wishlist-container">
+            <button
             id = "ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit add-to-cart-button button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
@@ -97,6 +98,13 @@
               </svg>
             </div>
           </button>
+          <button class="custom-wishlist-button">
+<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 0C2.47122 0 0 2.47122 0 5.5C0 7.54808 1.54382 9.47645 3.42578 11.4541C5.30774 13.4318 7.62419 15.4347 9.46973 17.2803C9.61038 17.4209 9.80112 17.4999 10 17.4999C10.1989 17.4999 10.3896 17.4209 10.5303 17.2803C12.3758 15.4347 14.6923 13.4318 16.5742 11.4541C18.4562 9.47645 20 7.54808 20 5.5C20 2.47122 17.5288 0 14.5 0C12.7618 0 11.2484 0.933244 10 2.51855C8.75159 0.933244 7.23822 0 5.5 0ZM5.5 1.5C6.96429 1.5 8.18315 2.2792 9.36621 4.15039C9.43386 4.25727 9.52744 4.34531 9.63826 4.40632C9.74907 4.46732 9.87351 4.49931 10 4.49931C10.1265 4.49931 10.2509 4.46732 10.3617 4.40632C10.4726 4.34531 10.5661 4.25727 10.6338 4.15039C11.8168 2.2792 13.0357 1.5 14.5 1.5C16.7182 1.5 18.5 3.28178 18.5 5.5C18.5 6.70192 17.2938 8.52355 15.4883 10.4209C13.8418 12.1511 11.7952 13.9587 10 15.709C8.20484 13.9587 6.15821 12.1511 4.51172 10.4209C2.70618 8.52355 1.5 6.70192 1.5 5.5C1.5 3.28178 3.28178 1.5 5.5 1.5Z" fill="black"/>
+</svg>
+
+          </button>
+          </div>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
