@@ -15,7 +15,7 @@
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
 
   Usage:
-  {% render 'custom-card-product', show_vendor: section.settings.show_vendor %}
+  {% render 'custom-related-card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -50,7 +50,7 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- if card_product.featured_media -%}
-          <div class="card__media">
+          <div class="card__media custom-featured-card__media">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
@@ -101,7 +101,7 @@
 
 
         {% comment %} descrition section  {% endcomment %}
-        <div class="card__content">
+        <div class=" card__content">
           <div class="card__information">
             <h3
               class="card__heading"
