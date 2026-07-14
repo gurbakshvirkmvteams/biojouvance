@@ -402,12 +402,13 @@
     white-space: nowrap;
 }
 
-.custom-footer__content-bottom-wrapper{
+.custom-footer__content-bottom-wrapper {
     justify-content: center;
 }
-.custom-copyright__content{
-font-weight: 400;
-font-size: 14px;
-line-height: 100%;
-letter-spacing: 10%;
+
+.custom-copyright__content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 10%;
 }

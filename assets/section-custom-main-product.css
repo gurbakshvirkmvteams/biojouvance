@@ -191,10 +191,11 @@
   text-transform: uppercase;
   margin-bottom: 68px;
 }
-.custom-price-wrapper{
+
+.custom-price-wrapper {
   text-align: center;
-font-weight: 400;
-font-size: 14px;
-line-height: 28px;
-letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0%;
 }
