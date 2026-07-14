@@ -385,7 +385,7 @@
 /* custom-footer-page */
 .custom-footer-page-width {
     max-width: 1344px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 .custom-footer-block-wrapper {
