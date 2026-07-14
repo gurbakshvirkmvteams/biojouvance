@@ -1,6 +1,5 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {%- if section.settings.enable_quick_add -%}
@@ -72,6 +71,7 @@
 
 
             {% comment %} custom cards rendered here  {% endcomment %}
+             {% comment %} {% media_aspect_ratio %} {% endcomment %}
             {% render 'custom-card-product'
               , card_product: product
               , media_aspect_ratio: section.settings.image_ratio

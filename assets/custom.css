@@ -67,7 +67,7 @@
 .hero-text h1 {
     font-weight: 700;
     font-size: clamp(24px, 5vw, 44px);
-    line-height: 100%;
+    line-height: 1.2;
     letter-spacing: 0%;
     color: var(--button-text-color);
 }
@@ -87,7 +87,7 @@
     all: unset;
     cursor: pointer;
     border: 2px solid var(--primary-color);
-    max-width: clamp(150px, 5vw, 222px);
+    max-width: 222px;
     width: 100%;
     height: clamp(34px, 5vw, 54px);
     border-radius: 6px;
@@ -411,4 +411,34 @@
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 10%;
+}
+
+.blog__small-title {
+    font-weight: 700;
+    font-size: clamp(12px, 3vw ,18px);
+    line-height: 100%;
+    letter-spacing: 10%;
+    color: var(--primary-color);
+}
+
+.custom-blog__title.h2 {
+    font-weight: 700;
+    font-size: clamp(20px, 3vw ,36px);
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 18px 0;
+}
+
+.blog__tagline {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 10%;
+    margin-bottom: 0;
+}
+.button:not([disabled]):hover::after,.button:not([disabled]):hover::before, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after {
+    --border-offset: 1.3px;
+    /* box-shadow: none; */
+     box-shadow: 0 1px 8px 0 var(--light-bg), 0 2px 10px 0 var(--primary-color);
+    
 }

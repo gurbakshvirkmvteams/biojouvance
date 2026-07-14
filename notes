@@ -30,3 +30,12 @@
 -- created related products section and cards 
 
 -- created best sellers page and added related products and sections
+
+
+# Bio-Jouvance
+-- created Header section according to figma design
+-- created footer section according to figma design
+-- added liquid condition for footer to change color theme according to active page 
+-- created tab section above header 
+-- adjusted cards sizing conflicting code and adjusted ration of cards according to design
+-- added hover effects to the buttons and removed dawn's default styling 
