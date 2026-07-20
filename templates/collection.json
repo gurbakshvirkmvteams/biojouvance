@@ -22,7 +22,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 3,
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": true,
@@ -34,10 +34,61 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_feature_banner_cards_9DheLG": {
+      "type": "custom-feature-banner-cards",
+      "blocks": {
+        "feature_mgaYMm": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/bunny.svg",
+            "title": "CRUELTY FREE",
+            "description": "We make skincare and makeup with love, for all. None of our products or formulas have or will ever be tested on animals."
+          }
+        },
+        "feature_DVUqCK": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/plant.svg",
+            "title": "NON GMO",
+            "description": "We formulate without gluten-derived ingredients. While not proven to cause a reaction in those with gluten sensitivities."
+          }
+        },
+        "feature_qcYb6V": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/carrot.svg",
+            "title": "VEGAN",
+            "description": "We are vegan meaning that none of our products, packaging, formulas or ingredients contain animal derivatives."
+          }
+        },
+        "feature_fNN6Nf": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/plant2.svg",
+            "title": "ORGANIC",
+            "description": "We make skincare and makeup with love, for all. None of our products or formulas have or will ever be tested on animals."
+          }
+        }
+      },
+      "block_order": [
+        "feature_mgaYMm",
+        "feature_DVUqCK",
+        "feature_qcYb6V",
+        "feature_fNN6Nf"
+      ],
+      "name": "Feature Cards",
+      "settings": {
+        "background_color": "#D8B5B6",
+        "text_color": "#FFFFFF",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "custom_feature_banner_cards_9DheLG"
   ]
 }

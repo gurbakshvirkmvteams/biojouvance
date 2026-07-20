@@ -2,72 +2,169 @@
 <div class="custom-video-container" style="padding-top:{{ section.settings.padding_top }}px; padding-bottom:{{ section.settings.padding_bottom }}px;">
   <div class="custom-video-wrapper">
 
-    {% if section.settings.left_video %}
-      <div class="custom-video-card">
+    <div class="custom-video-card">
+      <div class="video-wrapper">
         {{
-          section.settings.left_video
-          | video_tag:
-            controls: true,
-            autoplay: false,
-            loop: false,
-            muted: false,
-            image_size: '800x'
+          section.settings.left_video | video_tag: controls: false, autoplay: false, loop: false, muted: false, playsinline: true, image_size: '800x', class: 'custom-video'
         }}
-      </div>
-    {% endif %}
 
-    {% if section.settings.right_video %}
-      <div class="custom-video-card">
-        {{
-          section.settings.right_video
-          | video_tag:
-            controls: true,
-            autoplay: false,
-            loop: false,
-            muted: false,
-            image_size: '800x'
-        }}
-      </div>
-    {% endif %}
-
+        <div class="video-thumbnail-bg" style="background-image:url('{{ section.settings.left_video_thumbnail | image_url: width: 900 }}');">
+          <button class="video-play-btn">
+            <svg
+              fill="#CCA9A9"
+              height="94px"
+              width="94px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 512 512"
+              xml:space="preserve"
+              stroke="#CCA9A9">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g>
+              <g>
+                <path d="M256,0C114.511,0,0,114.497,0,256c0,141.49,114.495,256,256,256c141.49,0,256-114.497,256-256C512,114.51,397.503,0,256,0 z M348.238,284.418l-120.294,69.507c-10.148,5.864-22.661,5.874-32.826,0.009c-10.158-5.862-16.415-16.699-16.415-28.426V186.493 c0-11.728,6.258-22.564,16.415-28.426c5.076-2.93,10.741-4.395,16.406-4.395c5.67,0,11.341,1.468,16.42,4.402l120.295,69.507 c10.149,5.864,16.4,16.696,16.4,28.418C364.639,267.722,358.387,278.553,348.238,284.418z"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
-{% schema %}
-  {
-    "name": "Custom Video Section",
-    "settings": [
-      {
-        "type": "video",
-        "id": "left_video",
-        "label": "Left section Video"
-      }, {
-        "type": "video",
-        "id": "right_video",
-        "label": "Right section Video"
-      }, {
-        "type": "range",
-        "id": "padding_top",
-        "label": "Padding Top",
-        "min": 0,
-        "max": 150,
-        "step": 5,
-        "unit": "px",
-        "default": 50
-      }, {
-        "type": "range",
-        "id": "padding_bottom",
-        "label": "Padding Bottom",
-        "min": 0,
-        "max": 150,
-        "step": 5,
-        "unit": "px",
-        "default": 50
-      }
-    ],
-    "presets": [
-      {
-        "name": "Custom Video Section"
-      }
-    ]
-  }
-{% endschema %}
+
+{% if section.settings.right_video %}
+  <div class="custom-video-card">
+    <div class="video-wrapper">
+      {{
+        section.settings.right_video | video_tag: controls: false, autoplay: false, loop: true, muted: false, image_size: '800x'
+      }}
+      <div class="video-thumbnail-bg" style="background-image:url('{{ section.settings.right_video_thumbnail | image_url: width: 900 }}');">
+        <button class="video-play-btn">
+          <svg
+            fill="#CCA9A9"
+            height="94px"
+            width="94px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+            stroke="#CCA9A9">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g>
+            <g>
+              <path d="M256,0C114.511,0,0,114.497,0,256c0,141.49,114.495,256,256,256c141.49,0,256-114.497,256-256C512,114.51,397.503,0,256,0 z M348.238,284.418l-120.294,69.507c-10.148,5.864-22.661,5.874-32.826,0.009c-10.158-5.862-16.415-16.699-16.415-28.426V186.493 c0-11.728,6.258-22.564,16.415-28.426c5.076-2.93,10.741-4.395,16.406-4.395c5.67,0,11.341,1.468,16.42,4.402l120.295,69.507 c10.149,5.864,16.4,16.696,16.4,28.418C364.639,267.722,358.387,278.553,348.238,284.418z"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+</div></div>{% endif %}</div></div><script>
+document.querySelectorAll(".video-wrapper").forEach(function(wrapper){
+
+    const video = wrapper.querySelector("video");
+    const overlay = wrapper.querySelector(".video-thumbnail-bg");
+    const button = wrapper.querySelector(".video-play-btn");
+
+    if(!video || !overlay || !button) return;
+
+    function playVideo(){
+        video.play();
+        wrapper.classList.add("playing");
+    }
+
+    function pauseVideo(){
+        video.pause();
+        wrapper.classList.remove("playing");
+    }
+
+    button.addEventListener("click",function(e){
+        e.preventDefault();
+        playVideo();
+    });
+
+    overlay.addEventListener("click",function(){
+        playVideo();
+    });
+
+    video.addEventListener("click",function(){
+        if(video.paused){
+            playVideo();
+        }else{
+            pauseVideo();
+        }
+    });
+
+    video.addEventListener("pause",function(){
+        wrapper.classList.remove("playing");
+    });
+
+    video.addEventListener("ended",function(){
+        wrapper.classList.remove("playing");
+        video.currentTime = 0;
+    });
+
+    video.addEventListener("play",function(){
+        wrapper.classList.add("playing");
+    });
+
+});
+</script>{% schema %}
+{
+  "name": "Custom Video Section",
+  "settings": [
+    {
+      "type": "video",
+      "id": "left_video",
+      "label": "Left section Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_video_thumbnail",
+      "label": "Left Video Thumbnail"
+    },
+    {
+      "type": "video",
+      "id": "right_video",
+      "label": "Right section Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_video_thumbnail",
+      "label": "Right Video Thumbnail"
+    }, {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    }, {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Video Section"
+    }
+  ]
+}{% endschema %}

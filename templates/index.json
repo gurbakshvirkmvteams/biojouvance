@@ -17,7 +17,7 @@
         "subtitle": "Protect your skin from harmful radicals with our CoQ10 Cream",
         "button_text": "SHOP NOW",
         "button_link": "",
-        "hero_image": "shopify://shop_images/hero-section-image.png",
+        "hero_image": "shopify://shop_images/hero-section-image-removebg-preview.png",
         "padding_top": 130,
         "padding_bottom": 130
       }
@@ -87,15 +87,15 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": true,
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "f1552b18-6017-4231-810d-74e61da22c37": {
@@ -272,7 +272,7 @@
       "settings": {
         "my_custom_image": "shopify://shop_images/banner3.png",
         "short_heading": "COLASTIN",
-        "heading": "Age-DefyingCream",
+        "heading": "Age-Defying Cream",
         "description": "Formulated with the same ratio of collagen and elastin present in human skin tissue, this luxurious cream helps improve elasticity and suppleness in skin.",
         "banner_button_text": "",
         "banner_button_link": "",
@@ -351,8 +351,11 @@
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
+        "heading": "THE BEAUTY REVIEW",
+        "small_title": "OUR BLOG",
+        "tagline": "BROUGHT TO YOU BY BIO JOUVANCE PARIS",
+        "header_alignment": "center",
+        "heading_size": "h2",
         "blog": "news",
         "post_limit": 3,
         "columns_desktop": 3,
@@ -361,8 +364,8 @@
         "show_date": true,
         "show_author": true,
         "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 80,
+        "padding_bottom": 68
       }
     },
     "custom_feature_banner_cards_R3NEdt": {

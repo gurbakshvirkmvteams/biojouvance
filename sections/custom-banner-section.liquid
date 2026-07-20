@@ -8,7 +8,8 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     ">
-      <div class="banner-text-container">
+      <div class="banner-text-container" style="max-width: {{section.settings.banner_text_width}}px;">
+        {% comment %} this needs customised max width  {% endcomment %}
         {% if section.settings.short_heading != blank %}
           <span class="banner-short-heading">
             {{ section.settings.short_heading }}
@@ -61,6 +62,15 @@
         "label": "Button Link",
         "type": "url",
         "id": "banner_button_link"
+      },{
+        "type": "range",
+        "id": "banner_text_width",
+        "label": "Text Banner Width",
+        "min": 0,
+        "max": 600,
+        "step": 6,
+        "unit": "px",
+        "default": 558
       }, {
         "type": "select",
         "id": "layout",

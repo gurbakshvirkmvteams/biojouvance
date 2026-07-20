@@ -173,6 +173,56 @@
         "padding_top": 60,
         "padding_bottom": 100
       }
+    },
+    "custom_feature_banner_cards_D4Btcc": {
+      "type": "custom-feature-banner-cards",
+      "blocks": {
+        "feature_hULXnM": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/bunny.svg",
+            "title": "CRUELTY FREE",
+            "description": "We make skincare and makeup with love, for all. None of our products or formulas have or will ever be tested on animals."
+          }
+        },
+        "feature_hxTXa8": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/plant.svg",
+            "title": "NON GMO",
+            "description": "We formulate without gluten-derived ingredients. While not proven to cause a reaction in those with gluten sensitivities."
+          }
+        },
+        "feature_EBDWGa": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/carrot.svg",
+            "title": "VEGAN",
+            "description": "We are vegan meaning that none of our products, packaging, formulas or ingredients contain animal derivatives."
+          }
+        },
+        "feature_Q6bMMC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/plant2.svg",
+            "title": "ORGANIC",
+            "description": "We make skincare and makeup with love, for all. None of our products or formulas have or will ever be tested on animals."
+          }
+        }
+      },
+      "block_order": [
+        "feature_hULXnM",
+        "feature_hxTXa8",
+        "feature_EBDWGa",
+        "feature_Q6bMMC"
+      ],
+      "name": "Feature Cards",
+      "settings": {
+        "background_color": "#D8B5B6",
+        "text_color": "#FFFFFF",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
@@ -181,6 +231,7 @@
     "guide_text_j8tkUK",
     "custom_image_text_6d7GxB",
     "1783657549201debd2",
-    "related-products"
+    "related-products",
+    "custom_feature_banner_cards_D4Btcc"
   ]
 }
