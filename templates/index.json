@@ -188,6 +188,7 @@
         "description": "When serums just aren't enough. Imported from France and handled with the utmost care and advanced technique, Bio Jouvance Paris ampoules are supercharged serums with higher concentrations of active ingredients for an added boost to any facial treatment or at home self care remedy.",
         "banner_button_text": "SHOP NOW",
         "banner_button_link": "shopify://pages/our-products",
+        "banner_text_width": 558,
         "layout": "image_first",
         "padding_top": 125,
         "padding_bottom": 125,
@@ -232,6 +233,7 @@
         "description": "Stimulate new cell growth with our CoQ10 nourishing recovery masque Oxygenate your skin with our concentrated serum Protect your skin from harmful radicals with our CoQ10 Cream",
         "banner_button_text": "SHOP NOW",
         "banner_button_link": "shopify://pages/our-products",
+        "banner_text_width": 558,
         "layout": "text_first",
         "padding_top": 120,
         "padding_bottom": 120,
@@ -276,6 +278,7 @@
         "description": "Formulated with the same ratio of collagen and elastin present in human skin tissue, this luxurious cream helps improve elasticity and suppleness in skin.",
         "banner_button_text": "",
         "banner_button_link": "",
+        "banner_text_width": 558,
         "layout": "text_first",
         "padding_top": 135,
         "padding_bottom": 135,
@@ -342,7 +345,9 @@
       "name": "Custom Video Section",
       "settings": {
         "left_video": "shopify://files/videos/7754396-hd_1920_1080_30fps.mp4",
+        "left_video_thumbnail": "shopify://shop_images/video_thumbnail.png",
         "right_video": "shopify://files/videos/10835749-hd_1920_1080_25fps.mp4",
+        "right_video_thumbnail": "shopify://shop_images/video_thumbnail1.png",
         "padding_top": 50,
         "padding_bottom": 50
       }
