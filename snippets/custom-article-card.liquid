@@ -109,14 +109,14 @@
       </div>
       <div class="card__content   custom-blog-card__content">
         <div class="card__information">
-          
+
           <div class="55 article-card__info custom-blog-article-card__info caption-with-letter-spacing h5">
             {%- if show_date -%}
               <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
-            {%- if show_author -%}
-              <span>{{ article.author }}</span>
-            {%- endif -%}
+          {% comment %} {%- if show_author -%}
+                          <span>{{ article.author }}</span>
+                      {%- endif -%} {% endcomment %}
           </div>
           <h3 class="card__heading custom-blog-card__heading{% if show_excerpt %} h2{% endif %}">
             <a href="{{ article.url }}" class="full-unstyled-link">
@@ -138,6 +138,16 @@
                 <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
               {%- endif -%}
             </div>
+            <button class="blog-read-more-button">READ MORE
+              <svg
+                width="22"
+                height="8"
+                viewBox="0 0 22 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4L18 -1.74846e-07L18 3L-1.31134e-07 3L-2.18557e-07 5L18 5L18 8L22 4Z" fill="#CCA9A9" />
+              </svg>
+            </button>
           {%- endif -%}
         </div>
         {%- if show_badge -%}

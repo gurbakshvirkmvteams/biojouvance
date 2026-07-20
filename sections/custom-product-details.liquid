@@ -3,41 +3,46 @@
   href="{{ 'custom-meta-product-details.css' | asset_url }}"
   media="print"
   onload="this.media='all'">
+{% if product.metafields.custom.ingredients_image != blank or product.metafields.custom.details_description != blank   or product.metafields.custom.ingredients_description != blank or product.metafields.custom.product_details.value != blank %}
+  <div class="custom-product-details" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="custom-product-description">
+      {% if product.metafields.custom.ingredients_image %}
+        <div class="custom-product-description-image">
+          <div class="grid-image">
+            {{
+              product.metafields.custom.ingredients_image | image_url: width: 800 | image_tag
+            }}
+          </div>
+        </div>
+      {% endif %}
 
-<div class="custom-product-details" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
-  <div class="custom-product-description">
-    <div class="custom-product-description-image">
-      <div class="grid-image">
-        {% if product.metafields.custom.ingredients_image %}
-          {{
-            product.metafields.custom.ingredients_image | image_url: width: 800 | image_tag
-          }}
-        {% endif %}
-      </div>
-    </div>
-    <div class="custom-product-description-text">
       {% if product.metafields.custom.ingredients_description %}
-        <p>{{ product.metafields.custom.details_description | metafield_tag }}</p>
+
+        <div class="custom-product-description-text">
+          <p>{{ product.metafields.custom.details_description | metafield_tag }}</p>
+        </div>
+      {% endif %}
+
+    </div>
+
+    <div class="custom-product-details-content">
+      {% if product.metafields.custom.ingredients_description %}
+        <div class="custom-product-details-text">
+          <p>{{ product.metafields.custom.ingredients_description | metafield_tag }}</p>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.product_details.value != blank %}
+        <div class="custom-product-details-image">
+          {% for image in product.metafields.custom.product_details.value %}
+            {{
+              image | image_url: width: 800 | image_tag
+            }}
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
   </div>
-
-  <div class="custom-product-details-content">
-    <div class="custom-product-details-text">
-      <p>{{ product.metafields.custom.ingredients_description | metafield_tag }}</p>
-    </div>
-
-    {% if product.metafields.custom.product_details.value != blank %}
-      <div class="custom-product-details-image">
-        {% for image in product.metafields.custom.product_details.value %}
-          {{
-            image | image_url: width: 800 | image_tag
-          }}
-        {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-</div>
+{% endif %}
 {% schema %}
   {
     "name": "Product Metaobjects",

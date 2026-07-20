@@ -1,0 +1,43 @@
+{% style %}
+  .breadcrumb-routes {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+  }
+  .breadcrumb-routes p {
+    margin: 0;
+    color: initial;
+  }
+  .breadcrumb-routes a {
+    color: initial;
+    text-decoration: none;
+  }
+{% endstyle %}
+{% unless request.page_type == 'index' %}
+  <div class="breadcrumb-routes page-width">
+    <a href="{{ routes.root_url }}">Home</a>
+    {% assign current_collection = collection | default: product.collections.first %}
+    {% if page %}
+      <span>/</span>
+      <span>{{ page.title }}</span>
+
+    {% elsif collection %}
+      <span>/</span>
+      <span>{{ collection.title }}</span>
+
+    {% elsif blog %}
+      <span>/</span>
+      <span>{{ blog.title }}</span>
+
+    {% elsif product %}
+      {% if current_collection %}
+        <span>/</span>
+        <a href="{{ current_collection.url }}">
+          {{ current_collection.title }}
+        </a>
+      {% endif %}
+      <span>/</span>
+      <span>{{ product.title }}</span>
+    {% endif %}
+  </div>
+{% endunless %}

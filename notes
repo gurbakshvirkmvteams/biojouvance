@@ -39,3 +39,13 @@
 -- created tab section above header 
 -- adjusted cards sizing conflicting code and adjusted ration of cards according to design
 -- added hover effects to the buttons and removed dawn's default styling 
+
+
+
+# Bio-Jouvance
+-- created contact page
+-- added user customizeable settings to add details 
+-- Read About BreadCrumbs in ShopifyDev Docs
+-- Created Breadcrumbs snippet
+-- Added BreadCrumbs to theme.liquid file to show page routes on each page 
+-- Created vustom search bar icon for header while keeping dawn's logic intact
