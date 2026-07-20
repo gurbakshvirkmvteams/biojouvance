@@ -41,7 +41,7 @@
 -- added hover effects to the buttons and removed dawn's default styling 
 
 
-
+Today's update:
 # Bio-Jouvance
 -- created contact page
 -- added user customizeable settings to add details 
@@ -49,3 +49,5 @@
 -- Created Breadcrumbs snippet
 -- Added BreadCrumbs to theme.liquid file to show page routes on each page 
 -- Created vustom search bar icon for header while keeping dawn's logic intact
+-- made whole website custom sections responsive
+-- made minor changes in product page text alignment

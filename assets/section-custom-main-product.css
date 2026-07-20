@@ -6,7 +6,7 @@
 
 .custom-product__info-wrapper {
   border: 2px solid #EDEDED;
-  padding: 48px;
+  padding: clamp(20px, 3vw, 48px);
   max-width: 628px !important;
   width: 100%;
   aspect-ratio: 1/1 !important;

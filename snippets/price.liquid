@@ -29,7 +29,6 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-
 <div class="
     price custom-price-wrapper
     {%- if price_class %} {{ price_class }}{% endif -%}
