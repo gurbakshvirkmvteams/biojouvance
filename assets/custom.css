@@ -182,9 +182,11 @@
 .banner-text-container p {
     color: var(--light-text-color);
 }
-.banner-text-container ul{
+
+.banner-text-container ul {
     margin-top: 28px;
 }
+
 .banner-text-container ul li {
     font-weight: 700;
     font-size: 16px;
