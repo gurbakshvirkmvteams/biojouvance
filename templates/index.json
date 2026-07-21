@@ -13,7 +13,7 @@
       "type": "custom-hero",
       "name": "Hero Section",
       "settings": {
-        "title": "Nourish & Nurture Your Skin With Our CoQ10 Collection",
+        "title": "<h1>Nourish & Nurture</h1><h1>Your Skin With</h1><h1>Our CoQ10 Collection</h1>",
         "subtitle": "Protect your skin from harmful radicals with our CoQ10 Cream",
         "button_text": "SHOP NOW",
         "button_link": "",
